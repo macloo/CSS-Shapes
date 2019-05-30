@@ -139,17 +139,17 @@ a:hover {
     width: 300px;
     height: 150px;
     background: #243D83;
-    margin: 75px 50px 0;
+    margin: 75px 0 0 50px;
 }
 .fb {
     width: 150px;
     height: 150px;
     background: #EEB850;
-    margin: -150px 0 0 125px;
     border: 50px solid #243D83;
     border-radius: 50%;
     /* this makes the outermost ring */
     box-shadow: 0 0 0 50px #6592CF;
+    margin: -150px 0 0 125px;
 }
 
 /* 3 tombstones */
