@@ -140,6 +140,7 @@ a:hover {
     height: 150px;
     background: #243D83;
     margin: 75px 0 0 50px;
+    z-index: auto;
 }
 .fb {
     width: 150px;
