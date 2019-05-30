@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> CSS Shape Challenges </title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+	<h1>CSS Shape Challenges</h1>
+
+	<p>These are my own solutions from <a href="https://cssbattle.dev/">CSS Battle</a>. All CSS &mdash; no SVG and no images. For more shapes, see <a href="https://css-tricks.com/the-shapes-of-css/">The Shapes of CSS</a>. Some shapes here use<code> position: absolute </code>and others use only<code> margin</code>. (<em>Note:</em> No need for the<code> z-index </code>property. The order determines overlap.)</p>
+
+	<div class="box" id="a">
+		<div></div>
+	</div>
+
+<!-- triangles -->
+	<div class="box" id="b">
+		<div class="br bs"></div>
+		<div class="bo bn"></div>
+		<div class="bo bf bl"></div>
+		<div class="br bf bt"></div>
+	</div>
+
+<!-- overlapping circles -->
+	<div class="box" id="c">
+		<div class="cf"></div>
+		<div class="cs"></div>
+	</div>
+
+<!-- one square -->
+	<div class="box" id="d">
+		<div></div>
+	</div>
+
+<!-- four squares -->
+	<div class="box" id="e">
+		<div class="ea eb"></div>
+		<div class="ea ed"></div>
+		<div class="ec eb"></div>
+		<div class="ec ed"></div>
+	</div>
+
+<!-- circles in a box (yellow center) -->
+	<div class="box" id="f">
+		<div class="fa"></div>
+		<div class="fb"></div>
+	</div>
+
+<!-- 3 tombstones -->
+	<div class="box" id="g">
+		<!-- divs must touch b/c inline-block -->
+		<div id="ga"></div><div id="gb"></div><div></div>
+	</div>
+
+<!-- 3 overlapping circles, 2 with points -->
+	<div class="box" id="h">
+		<div id="ha"></div>
+		<div id="hb" class="hp"></div>
+		<div id="hc" class="hp"></div>
+	</div>
+
+<!-- circle w/ 3 quarters -->
+	<div class="box" id="i">
+		<div></div>
+	</div>
+
+<!-- 3 leaf shapes -->
+	<div class="box" id="j">
+		<!-- divs must touch b/c inline-block -->
+		<div id="ja"></div><div id="jb"></div><div id="jc"></div>
+	</div>
+
+<!-- fork -->
+	<div class="box" id="k">
+		<div class="tine" id="kx"></div>
+		<div id="kbase"></div>
+		<div class="tine" id="ka"></div>
+		<div class="tine" id="kb"></div>
+		<div class="tine" id="kc"></div>
+		<div class="tine" id="kd"></div>
+	</div>
+
+<!-- circle in a diamond -->
+	<div class="box" id="l">
+		<div id="la"></div>
+		<div id="lb">
+			<div id="lc"></div>
+		</div>
+	</div>
+
+<!-- 3 circles -->
+	<div class="box" id="m">
+		<!-- yellow columns -->
+		<div class="md mp1"></div>
+		<div class="md mp2"></div>
+		<div class="md mp3"></div>
+		<!-- circles -->
+		<div class="circle ma mp1"></div>
+		<div class="circle mb mp2"></div>
+		<div class="circle ma mp3"></div>
+	</div>
+
+<!-- 2 open half circles w/ dot between them -->
+	<div class="box" id="n">
+		<div class="half n1"></div>
+		<div class="half n2"></div>
+		<!-- center circle with dot -->
+		<div id="ndot"></div>
+	</div>
+
+<!-- mustache -->
+	<div class="box" id="o">
+		<div id="oa" class="big"></div>
+		<div id="oc" class="big"></div>
+		<div id="ob" class="big"></div>
+		<!-- circles -->
+		<div class="small ol"></div>
+		<div class="small or"></div>
+	</div>
+
+<!-- big eye -->
+	<div class="box" id="p">
+		<div id="pa"></div>
+		<div id="pb"></div>
+	</div>
+
+<!-- 4 circles -->
+	<div class="box" id="q">
+		<div class="qx"></div>
+		<div class="qc"></div>
+		<div class="qc qd"></div>
+		<div class="qa"></div>
+		<div class="qa qb"></div>
+	</div>
+
+<!-- 12 quarter-circles
+     note, I used 14 divs, but only 12 are visible -->
+	<div class="box" id="r">
+		<div></div><div></div><div></div><div></div>
+		<div></div><div></div><div></div><div></div><div></div>
+		<div></div><div></div><div></div><div></div><div></div>
+	</div>
+
+	<p>This was fun because I have rarely made any CSS shapes &mdash; aside from simple boxes and circles. There’s a <a href="https://cssbattle.dev/blog/getting-started/">blog post</a> about how you can reduce the character counts extremely by using various CSS tricks, but my examples here do not use any of those tricks.</p>
+
+	<p>All CSS shapes here coded by <a href="http://mindymcadams.com/">Mindy McAdams</a> in 2019.</p>
+
+</body>
+</html>

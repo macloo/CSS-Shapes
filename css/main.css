@@ -1,0 +1,539 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+/* NOTE: some alterations in CSS b/c of box-sizing: border-box */
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    background: #f8f8ff;
+    margin: 0;
+    padding: 2rem;
+    max-width: 1280px;
+}
+code {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #7c4e4e;
+}
+p {
+    line-height: 1.4rem;
+}
+a {
+    color: #3055b2;
+    text-decoration: none;
+}
+a:hover {
+    color: #7B3F61;
+    text-decoration: underline;
+}
+
+/* all the container boxes */
+.box {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #aaa;
+    display: inline-block;
+    margin: 0 0 0.2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* each example appears in a DIV with an ID in alphabetical order
+   i.e. a, b, c
+   */
+
+#a {
+    background: #0B2429;
+}
+#a div {
+    width: 200px;
+    height: 200px;
+    background: #F3AC3C;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
+
+/* triangles */
+#b {
+    background:#F2F2B6;
+}
+#b div {
+    position: absolute;
+    top: 85px;
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: none;
+    border-top-width: 130px;
+    border-top-style: solid;
+}
+.br { border-top-color: #FD4602; }
+.bo { border-top-color: #FF6D00; }
+.bf { transform: rotate(180deg); }
+.bn { left: 60px; }
+.bs { left: 80px; }
+.bl { left: 190px; }
+.bt { left: 170px; }
+
+/* overlapping circles */
+#c {
+    background: #09042A;
+}
+#c div {
+    position: absolute;
+    top: 75px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.cf {
+    left: 175px;
+    box-shadow: -100px 0 0 #7B3F61;
+}
+.cs {
+    left: 75px;
+    box-shadow: 100px 0 0 0 #E78481;
+}
+
+/* one square */
+#d {
+    background: #5d3a3a;
+}
+#d div {
+    width: 200px;
+    height: 200px;
+    background: #b5e0ba;
+}
+
+/* four squares */
+#e {
+    background: #62374e;
+}
+#e div {
+    width: 50px;
+    height: 50px;
+    background: #fdc57b;
+    position: absolute;
+}
+.ea { left: 50px; }
+.eb { top: 50px; }
+.ec { left: 300px; }
+.ed { top: 200px; }
+
+/* circles in a box (yellow center)
+   note, this would be different w/o box-sizing: border-box
+   (width & height of .fb would be 50px)
+   */
+#f {
+    background: #6592CF;
+}
+.fa {
+    width: 300px;
+    height: 150px;
+    background: #243D83;
+    margin: 75px auto 0;
+}
+.fb {
+    width: 150px;
+    height: 150px;
+    background: #EEB850;
+    margin: -150px auto 0;
+    border: 50px solid #243D83;
+    border-radius: 50%;
+    /* this makes the outermost ring */
+    box-shadow: 0 0 0 50px #6592CF;
+}
+
+/* 3 tombstones */
+#g {
+    background: #62306D;
+}
+#g div {
+    width: 100px;
+    height:100px;
+    background:#F7EC7D;
+    /* tombstone shape */
+    border-radius:0 0 50% 50%;
+    display:inline-block;
+}
+#ga { margin: 150px 0 0 50px; }
+#gb {
+    transform: rotate(180deg);
+    position: relative;
+    top: -100px;
+}
+
+/* 3 overlapping circles, 2 with points */
+#h {
+    background: #0B2429;
+}
+#h div {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+}
+#ha {
+    top: 30px;
+    left: 200px;
+    background: #F3AC3C;
+    border-radius: 50%;
+}
+#hb {
+    top: 90px;
+    left: 140px;
+    background: #998235;
+}
+#hc {
+    top: 150px;
+    left: 80px;
+    background: #F3AC3C;
+}
+.hp {
+    border-radius: 50% 0 50% 50%;
+}
+
+/* circle w/ 3 quarters */
+#i {
+    background: #E3516E;
+}
+#i div {
+    width: 0;
+    height: 0;
+    border-left: 100px solid #F7F3D7;
+    border-right: 100px solid #FADE8B;
+    border-top: 100px solid #51B5A9;
+    border-bottom: 100px solid transparent;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    margin: 50px auto 0;
+}
+
+/* 3 leaf shapes */
+#j {
+    background: #0B2429;
+}
+#j div {
+    width: 150px;
+    height: 150px;
+    /* create a leaf shape */
+    border-radius: 200px 0 / 200px 100px;
+    position: absolute;
+    top: 70px;
+}
+#ja {
+    left: 70px;
+    background: #1A4341;
+}
+#jb {
+    left: 120px;
+    background: #998235;
+}
+#jc {
+    left: 170px;
+    background: #F3AC3C;
+}
+
+/* fork */
+#k {
+    background: #6592CF;
+}
+.tine{
+    width: 20px;
+    height: 110px;
+    background: #060F55;
+    border-radius: 250px;
+    box-shadow: 20px 0 0 #6592CF;
+    position: absolute;
+    top: 50px;
+}
+#ka { left: 130px; }
+#kb { left: 170px; }
+#kc { left: 210px; }
+#kd { left: 250px; }
+/* kx is a tine repurposed as the handle */
+#kx {
+    top: 200px;
+    left: 190px;
+}
+#kbase{
+    width: 140px;
+    height: 150px;
+    background: #060F55;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    top: 100px;
+    left: 130px;
+}
+
+/* circle in a diamond */
+#l {
+    background: #222730;
+}
+#la {
+    background:#4CAAB3;
+    height: 150px;
+    margin-top: 75px;
+}
+#lb {
+    background:#4CAAB3;
+    width: 200px;
+    height: 200px;
+    border: 50px solid #222730;
+    transform: rotate(45deg);
+    margin: -175px auto 0;
+}
+#lc {
+    background: #393E46;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 25px;
+}
+
+/* 3 circles */
+#m {
+    background: #62306D;
+}
+#m div {
+    position: absolute;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.ma {
+    background: #E38F66;
+    border: 20px solid #AA445F;
+}
+.mb {
+    background: #AA445F;
+    border: 20px solid #E38F66;
+}
+/* positions for circles and columns */
+.mp1 {
+    top: 150px;
+    left: 50px;
+}
+.mp2 {
+    top: 50px;
+    left: 150px;
+}
+.mp3 {
+    top: 150px;
+    left: 250px;
+}
+/* yellow columns are just rectangles */
+.md {
+    width: 100px;
+    height: 250px;
+    background: #F7EC7D;
+    margin-top: 45px;
+}
+
+/* 2 open half circles w/ dot between them */
+#n {
+    background: #191210;
+}
+#n div {
+    position: absolute;
+}
+#ndot {
+    width: 100px;
+    height: 100px;
+    background: #84271C;
+    border: 25px solid #191210;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px #ECA03D;
+    top: 100px;
+    left: 150px;
+}
+.half {
+    width: 100px;
+    height: 100px;
+    border: 20px solid #ECA03D;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    top: 100px;
+}
+.n1 {
+    left: 50px;
+    transform: rotate(-45deg);
+}
+.n2 {
+    left: 250px;
+    transform: rotate(135deg);
+}
+
+/* mustache */
+#o {
+    background: #F5D6B4;
+}
+#o div {
+    border-radius: 50%;
+    position: absolute;
+}
+.big {
+    width: 100px;
+    height: 100px;
+    border: 20px solid #D86F45;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    top: 100px;
+}
+#oa {
+    left: 70px;
+    transform: rotate(-45deg);
+}
+#ob {
+    left: 150px;
+    transform: rotate(135deg);
+}
+#oc {
+    left: 230px;
+    transform: rotate(-45deg);
+}
+.small {
+    width: 20px;
+    height: 20px;
+    background: #D86F45;
+    top: 140px;
+}
+.ol { left: 70px; }
+.or { left: 310px; }
+
+
+/* filled half circle */
+.fhalfie {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border-left: 50px solid #191210;
+    border-top: 50px solid #191210;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+
+/* big eye */
+#p {
+    background: #0B2429;
+}
+#p div { position:absolute; }
+#pa {
+    width: 200px;
+    height: 200px;
+    background: #998235;
+    border-radius: 0 50% 0;
+    transform: rotate(-45deg);
+    top: 50px;
+    left: 100px;
+}
+#pb {
+    width: 140px;
+    height: 140px;
+    background: #0B2429;
+    border: 45px solid #F3AC3C;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px #0B2429;
+    top: 80px;
+    left: 130px;
+}
+
+/* 4 circles */
+#q {
+    background: #09042A;
+}
+#q div {
+    border-radius: 50%;
+    position: absolute;
+}
+/* top & bottom */
+.qa {
+    width: 80px;
+    height: 80px;
+    background: #F5BB9C;
+    border: 10px solid #09042A;
+    top: 57px;
+    left: 160px;
+}
+.qb { top: 163px; }
+/* left & right */
+.qc {
+    width: 80px;
+    height: 80px;
+    background: #09042A;
+    border: 10px solid #E78481;
+    top: 110px;
+    left: 100px;
+}
+.qd { left: 220px; }
+/* behind all the others */
+.qx {
+    width: 88px;
+    height: 88px;
+    background: #E78481;
+    top: 106px;
+    left: 156px;
+}
+
+/* 12 quarter-circles */
+#r {
+    background: #5C434C;
+}
+#r div {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    border: 80px solid transparent;
+    margin: 15px 0 0 -60px;
+}
+/* lots of pratice with nth-child */
+#r div:nth-child(odd) { border-top-color: #F09462; }
+#r div:nth-child(even) { border-top-color: #F5D6B4; }
+/* first DIV */
+#r div:nth-child(1) { margin-left: 10px; }
+/* position first DIV in 2 rows with 5 divs */
+#r div:nth-child(5), #r div:nth-child(10) { margin-left: -90px; }
+/* rows 2 and 3 */
+#r div:nth-child(n+5):nth-child(-n+14) { margin-top: -70px; }
+
+/* final DIV in each row is positioned because
+   otherwise cannot get it into that row, or anyway I could not
+   figure out how to do it
+   */
+#r div:nth-child(4), #r div:nth-child(9), #r div:nth-child(14) {
+    margin: 0;
+    position: absolute;
+    left: 310px;
+}
+#r div:nth-child(4) { top: 15px; }
+#r div:nth-child(9) { top: 180px; }
+#r div:nth-child(14) { top: 273px; }
+
+
+/* media queries */
+@media screen and (max-width: 868px) {
+    body {
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    h1, p {
+        width: 400px;
+        margin: 1rem auto 1rem;
+    }
+    .box {
+        display: block;
+        margin: 0 auto 0.2rem;
+    }
+}
